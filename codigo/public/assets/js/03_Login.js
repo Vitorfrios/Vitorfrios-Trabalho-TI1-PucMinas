@@ -207,12 +207,13 @@ function salvaLogin(event) {
 
     // Chama a função para pegar o próximo ID antes de salvar
     getNextUserId().then(nextId => {
-        // Cria um novo usuário com o ID incrementado
+        // Cria um novo usuário com o ID incrementado e notificações: false
         let usuario = { 
             "id": nextId.toString(),  // ID incrementado
             "login": login, 
             "nome": nome, 
-            "email": email 
+            "email": email,
+            "notificacoes": false  // Novo campo de notificações
         };
 
         // Cria um objeto de senha com o mesmo ID do usuário
@@ -253,7 +254,8 @@ function salvaLogin(event) {
                         login: usuario.login,
                         nome: usuario.nome,
                         email: usuario.email,
-                        senha: senhaObj.senha // Inclui a senha ao salvar no usuario_logado
+                        senha: senhaObj.senha, // Inclui a senha ao salvar no usuario_logado
+                        notificacoes: usuario.notificacoes // Inclui notificações ao salvar no usuario_logado
                     })
                 })
                 .then(response => response.json())

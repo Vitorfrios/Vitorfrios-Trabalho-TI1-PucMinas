@@ -83,7 +83,7 @@ async function carregarDadosUsuario() {
 // Função para salvar o estado de notificações
 async function salvarEstadoNotificacoes(ativo) {
     try {
-        const response = await fetch('http://localhost:3000/configuracoes/1', {
+        const response = await fetch('http://localhost:3000/usuario_logado/1', {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ usuarioId: "1", notificacoes: ativo })
