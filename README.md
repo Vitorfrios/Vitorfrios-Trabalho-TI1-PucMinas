@@ -223,5 +223,3 @@ A estrutura do projeto está organizada em pastas para facilitar a compreensão 
 - Caso queira saber mais sobre o projeto clique em " Ver Informações ", você será encaminhado a uma pagina que contém todas as telas funcionando, entretanto em miniatura
 - [Informações das Telas](codigo/README.md)
 
-- [about](codigo/about.html)
-- [Informações das Telas](ccodigo/public/pages/01_Telas.html)
